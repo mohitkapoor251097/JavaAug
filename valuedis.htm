@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+     
+        function subFun()
+    {
+        //var x=document.getElementById("fname").value;
+       // e.preventDefault();
+            //  alert("you submitted"+x);
+            // dis.innerHTML=x;
+             // document.writeln("new"+b)
+
+             document.getElementById('dis').innerHTML =  
+                    document.getElementById("fname").value; 
+    }
+   
+
+    </script>
+</head>
+<body>
+    <form  onsubmit="subFun();return false">
+        <input type="text" id="fname">
+        <input type="submit" value="submit">
+    </form>
+    <br>
+    <br>
+    <br>
+    <div id="dis">hello</div>
+   
+
+</body>
+</html>
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>HTML JavaScript output on same page</title>
+    <script type="text/JavaScript">
+        function showMessage(){
+            var message = document.getElementById("message").value;
+            display_message.innerHTML= message;
+        }
+    </script>
+</head>
+<body>
+Enter message: <input type="text" id = "message">
+<input type="submit" onclick="showMessage()" value="submit" />
+<p> Message is: <span id = "display_message"></span> </p>
+</body>
+</html>
+ -->

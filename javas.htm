@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="this">
+          <li class="child">hello</li>
+          <li class="child">hello1</li>
+    </ul>
+    
+    <script>
+   let element=document.createElement('li');
+   let text=document.createTextNode("i am");
+   element.appendChild(text);
+    element.className="child";
+    element.id="created1";
+    element.innerHTML="<b>new list</b>"
+    element.setAttribute('title','mytitle');
+
+    let ul=document.querySelector("ul.this");
+    ul.appendChild(element);
+
+
+
+
+    a=53
+    document.querySelector('.child').innerHTML=a;
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="hello">hello welcome</h1>
+    <form action="Demosite.htm">
+        <input type="submit" value="submit" id="btn">
+    </form>
+    <script>
+   document.getElementById('hello').addEventListener('click',function(e)
+   {
+    var targe=e.target;
+    console.log('click'+targe)
+    // location.href='Demosite.htm';
+   });
+   document.getElementById('btn').addEventListener('click',function(e)
+   {
+    console.log('clicl')
+    e.preventDefault();
+   })
+   document.getElementById('hello').addEventListener('mousemove',function(e)
+   {
+    console.log(e.offsetX,e.offsetY)
+    document.body.style.backgroundColor=`rgb(${e.offsetX},${e.offsetY},${e.offsetX +e.offsetY})`;
+   // console.log('clicl')
+    e.preventDefault();
+   })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Assignment </title>
+  <style type="text/css">
+    h2
+{
+  text-decoration: underline;
+  text-align: center;
+  font-weight: bold;
+  font-size: 50px;
+ 
+}
+.but
+{
+   position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  padding: 0 5px;
+  margin-left: 350px;
+}
+.but1
+{
+   position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  padding: 0 5px;
+  margin-left: 420px;
+}
+
+input{ border: 1px solid; }
+
+td:first-child{ width: 100px; }
+.tab1{
+  margin-left:140px ;
+}
+
+legend {
+ text-decoration: underline;
+}
+fieldset {
+  position: relative;
+  top: 50px;
+  left: 50px;
+  box-sizing: border-box;
+  border: solid black 1px;
+}
+.table1
+{
+  width: 100px;
+}
+</style>
+  <script type="text/javascript">
+    function res()
+    {
+      var name=document.getElementById("name").value
+       let fname=document.getElementById("fname").value
+        let iname=document.getElementById("iname").value
+         let batch=document.getElementById("batch").value
+          let office=parseFloat(document.getElementById("office").value)
+           let wb=parseFloat(document.getElementById("wb").value)
+            let it=parseFloat(document.getElementById("it").value)
+             let cp=parseFloat(document.getElementById("cp").value)
+      document.getElementById("name1").innerHTML=name
+       document.getElementById("fname1").innerHTML=fname
+       document.getElementById("iname1").innerHTML=iname
+       document.getElementById("batch1").innerHTML=batch
+       document.getElementById("office1").innerHTML=office
+       document.getElementById("wb1").innerHTML=wb
+       document.getElementById("it1").innerHTML=it
+      document.getElementById("cp1").innerHTML=cp
+      let total=office + wb + it + cp
+     document.getElementById("total").innerHTML=total
+     let percentage=((total *100)/400)
+     document.getElementById("percentage").innerHTML=percentage
+     let grade;
+     if(percentage>=90)
+     {
+      grade="A+"
+     }
+     else if(percentage>=80 && percentage<90)
+     {
+      grade="A"
+     }
+      else if(percentage>=70 && percentage<80)
+     {
+      grade="B"
+     }
+      else if(percentage>=60 && percentage<70)
+     {
+      grade="C"
+     
+      }
+       else if(percentage>=50 && percentage<60)
+     {
+      grade="D"
+     }
+     else
+     {
+      grade="F"
+     }
+     document.getElementById("grade").innerHTML=grade
+ }
+  </script>
+</head>
+<body>
+<h2>STUDENT MARKSHEET</h2>
+<form method="get" >
+<fieldset>
+  <legend>STUDENT INFORMATION</legend> 
+  <table class="tab1">
+    <tr><td>Name:</td><td><input type="text" name="name" id="name"  ></td>
+      <td>Father Name:</td><td><input type="text" name="fname" id="fname" value=""></td></tr>
+    <tr><td>Institute Name:</td><td><input type="text" name="iname" id="iname"></td>
+    <td>Batch:</td><td><input type="text" name="batch" id="batch"></td></tr>
+  </table>
+</fieldset>
+<br>
+<fieldset>
+  <legend>SUBJECT MARKS</legend> 
+  <table >
+    <tr><td>OfficeAutomation:</td><td><input type="number" name="office" id="office"></td><td>Out of 100</td></tr>
+     <tr><td>Web Designing:</td><td><input type="number" name="wb" id="wb"></td><td>Out of 100</td></tr>
+      <tr><td>IT:</td><td><input type="number" name="it" id="it"></td><td>Out of 100</td></tr>
+       <tr><td>C# Programming:</td><td><input type="number" name="cp" id="cp"></td><td>Out of 100</td></tr>
+       <tr> <legend class="but"><button type="button" name="submit "onclick="res()">Submit</button></legend> 
+        <legend class="but1"><input type="Reset"></legend> </tr>
+  </table>
+</fieldset>
+</form>
+<br><br><br><br>
+<table border="1px">
+ <tr><th colspan="2">Student Information</th></tr>
+ <tr> <td>Name:</td><td  id="name1" name="name1" >   </td></tr>
+ <tr> <td>Father Name:</td><td class="table1" id="fname1" name="fname1" >   </td></tr>
+ <tr> <td>Institute Name:</td><td class="table1" id="iname1">   </td></tr>
+ <tr> <td>Batch:</td><td class="table1" id="batch1">   </td></tr>
+
+ <tr><th colspan="2">Subject Marks</th></tr>
+ <tr> <td>OfficeAutomation:</td><td class="table1" id="office1">   </td></tr>
+ <tr> <td>Web Designing:</td><td class="table1" id="wb1">   </td></tr>
+ <tr> <td>IT:</td><td class="table1" id="it1">   </td></tr>
+ <tr> <td>C# Programming:</td><td class="table1" id="cp1">   </td></tr>
+
+ <tr><th colspan="2"> Marks Result</th></tr>
+ <tr> <td>TOTAL:</td><td class="table1" id="total">   </td></tr>
+ <tr> <td>Percentage:</td><td class="table1" id="percentage">   </td></tr>
+ <tr> <td>Grade:</td><td class="table1" id="grade">   </td></tr>
+  </table>
+</body>
+</html>

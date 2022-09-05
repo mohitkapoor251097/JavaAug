@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 2</title>
+    <style>
+        .abc
+        {
+            background-color: red;
+        }
+    </style>
+   
+</head>
+<body>
+    <div id="he" style="height: 200px;width:300px">
+        <h1>heloo</h1>
+        <div id="inner" style="height: 500px;width:500px;margin-top: 100px;">
+               ngjhj
+        </div>
+    </div>
+    <script>
+        function abc()
+        {
+            document.getElementById("he").style.background="green";
+        }
+  // document.getElementById("he").onclick=abc;
+
+
+//   document.getElementById("he").addEventListener("mouseenter",abc)
+//   document.getElementById("he").addEventListener("click",function()
+//   {
+//     this.style.border="10px solid red";
+//   })
+
+
+//   document.querySelector("#inner").addEventListener('click',function()
+//   {
+//     alert("inner div")
+//   },true);
+//   document.querySelector("#he").addEventListener('click',function()
+//   {
+//     alert("outer div")
+//   },true);
+
+
+//var a=document.querySelectorAll("ul")[1].innerHTML;
+var b=document.querySelector("#inner").className="abc";          //add class name
+var a=document.querySelector("#inner").classList="abc xyz"; 
+var c=document.querySelector("#inner").classList;
+console.log(c)
+
+    </script>
+</body>
+</html>

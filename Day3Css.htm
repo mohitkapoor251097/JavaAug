@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<h1>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a
+        {
+            text-decoration: none;
+            padding: 50px;
+        }
+        h1{
+            text-align: center;
+        }
+        
+       .column
+       {
+        border:2px solid  black;
+       }
+        *
+        {
+            box-sizing: border-box;
+
+        }
+        .column .c
+        {
+            float: left;
+            width: 25%;
+            padding-left: 10px;
+          
+        }
+        .column p
+        {
+            width: 40%;
+            text-align: center;
+           margin-left: 30px;
+        }
+
+        .row::after{
+            content: "";
+            display:inline;
+           
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <address style="color: rgb(80, 8, 8);background-color: tan;margin:25px 50px 75px 100px;border-right:1px solid red">
+        Written by <a href="mailto:juhi.com">Juhi</a>.<br>
+        Visit us at:<br>
+        my.com<br>
+         vasna<br>
+        Ahmedabad
+        </address> 
+        <p style="margin:50px;">hello mohit</p> -->
+
+
+        <header>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Address</a>
+                <a href="#">Contact Us</a>
+            </nav>
+</header>
+<article>
+    <h1>Images</h1>
+    <div class="row">
+        <div class="column">
+            <div class="c">
+    <img src="img.jpg" width="350px" height="300px"/>
+    <p>Nature refers to the interaction between the physical surroundings around us and tflora,   </p>
+</div>
+        </div>
+        <div class="column">
+            <div class="c">
+            <img src="img.jpg" width="350px" height="300px"/>
+            <p>Nature refers to the interaction between the physical surroundings around us and tflora,  </p><div>
+                </div>
+</div>
+</article>
+</body>
+</html>

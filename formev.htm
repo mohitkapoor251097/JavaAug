@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="subFun()">
+       <label>Name</label><input type="text" id="fname"oninput="infu(this)" onfocus="focusfu(this)" onblur="focusbl(this)" oninvalid="alert('plases fill')"><br>
+       <label>Class</label><input type="text" onfocus="focusfu(this)" onblur="focusbl(this)" onselect="onsel(this)"><br>
+        <select name="pincode"onfocus="focusfu(this)" onblur="focusbl(this) " onchange="onch(this)">
+            <option value="132103" selected="selected">132103</option>
+            <option value="132104">132104</option>
+            <option value="132105">132105</option>
+            <option value="132106">132106</option>
+        </select><br><br>
+        <input type="submit" value="Submit" >
+    </form>
+    <div id="test" style="border: 1px solid red">
+
+    </div>
+
+
+
+    <br>
+    <div id="test1" style="width:150px;height:150px;background-color: red;">
+
+    </div>
+    <script>
+function focusfu(ele)
+{
+  //  document.getElementById("fname").style.background="lime";
+  ele.style.background="lime";
+}
+function focusbl(ele)
+{
+  //  document.getElementById("fname").style.background="lime";
+  ele.style.background="";
+}
+function infu(ele)
+{
+  //  document.getElementById("fname").style.background="lime";
+  var x=ele.value
+  document.getElementById("test").innerHTML=x;
+}
+function onch(ele)
+{
+    var x=ele.value
+  document.getElementById("test").innerHTML=x;
+}
+function onsel(ele)
+{
+    alert("you selected");
+    console.log("selected")
+}
+function subFun()
+    {
+        var x=document.getElementById("fname").value;
+              alert("you submitted"+x);
+    }
+
+
+
+
+
+    var a=0;
+    var id=setInterval(Anim,1000);
+    function Anim()
+    {
+        a=a+10;
+        if(a==200)
+        {
+          clearInterval(id);      
+        }else{
+    var target=document.getElementById("test1");
+    target.style.width=a +'px';
+    //    console.log("hello")
+        }
+    }
+    // document.getElementById("fname")
+    </script>
+</body>
+</html>
