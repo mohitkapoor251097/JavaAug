@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+  <title th:text="${title}"></title>
+</head>
+<body>
+<h1 th:text="${submitted}"></h1>
+
+<div class="container">
+
+    <span>  Your Email is :  <p th:text="${user.email}"></p></span>
+ <span> Your Password is : <p th:text="${user.password}"></p></span>
+  Your Gender is:   <span th:text="${user.gender}"></span>
+    User Save Date is:   <span th:text="${user.date}"></span>
+</div>
+</body>
+</html>
